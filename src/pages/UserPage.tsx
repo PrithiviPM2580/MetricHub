@@ -13,12 +13,24 @@ import {
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
 import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetDescription,
+  SheetFooter,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import {
   BadgeCheckIcon,
   CandyIcon,
   CitrusIcon,
   ShieldIcon,
 } from "lucide-react";
-
+import { Progress } from "@/components/ui/progress";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 const UserPage = () => {
   return (
     <div>
@@ -101,7 +113,59 @@ const UserPage = () => {
               </HoverCard>
             </div>
           </div>
-          <div className="bg-primary-foreground p-4 rounded-lg">Info</div>
+          <div className="bg-primary-foreground p-4 rounded-lg">
+            <div className="flex items-center justify-between">
+              <h1 className="text-lg font-semibold">User Information</h1>
+              <Sheet>
+                <SheetTrigger asChild>
+                  <Button>Edit user</Button>
+                </SheetTrigger>
+                <SheetContent>
+                  <SheetHeader>
+                    <SheetTitle>Are you absolutely sure?</SheetTitle>
+                    <SheetDescription>
+                      This action cannot be undone.
+                    </SheetDescription>
+                  </SheetHeader>
+                </SheetContent>
+              </Sheet>
+            </div>
+            <div className="space-y-4 mt-4">
+              <div className="flex flex-col gap-2 mb-8">
+                <p className="text-sm text-muted-foreground">
+                  Profile completion
+                </p>
+                <Progress value={66} />
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="font-semibold">Username:</span>
+                <span>john_doe</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="font-semibold">Email:</span>
+                <span>john.doe@example.com</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="font-semibold">Phone:</span>
+                <span>+1 (555) 123-4567</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="font-semibold">Location:</span>
+                <span>Johnston, USA</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="font-semibold">Username:</span>
+                <span>john_doe</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="font-semibold">Role:</span>
+                <Badge>Admin</Badge>
+              </div>
+            </div>
+            <p className="text-sm text-muted-foreground mt-2">
+              Joined on January 1, 2023
+            </p>
+          </div>
           <div className="bg-primary-foreground p-4 rounded-lg">
             <CardList title="Latest Transactions" />
           </div>
