@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { LogOutIcon, MoonIcon, SettingsIcon, UserIcon } from "lucide-react";
+import { LogOutIcon, SettingsIcon, UserIcon } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   DropdownMenu,
@@ -10,16 +10,18 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { Theme } from "./Theme";
+import { SidebarTrigger } from "./ui/sidebar";
 
 const Navbar = () => {
   return (
     <header className="p-4 flex items-center justify-between">
       {/* Left */}
-      collapseButton
+      <SidebarTrigger />
       {/* Right */}
       <nav className="flex items-center gap-4">
         <Link to="/">Dashboard</Link>
-        <MoonIcon />
+        <Theme />
         <DropdownMenu>
           <DropdownMenuTrigger>
             <Avatar>
