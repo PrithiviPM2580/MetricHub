@@ -12,25 +12,19 @@ import {
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
-import {
-  Sheet,
-  SheetClose,
-  SheetContent,
-  SheetDescription,
-  SheetFooter,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
+import { Sheet, SheetTrigger } from "@/components/ui/sheet";
 import {
   BadgeCheckIcon,
   CandyIcon,
   CitrusIcon,
   ShieldIcon,
 } from "lucide-react";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Progress } from "@/components/ui/progress";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import EditUser from "@/components/EditUser";
+import AppLineChart from "@/components/AppLineChart";
 const UserPage = () => {
   return (
     <div>
@@ -120,14 +114,7 @@ const UserPage = () => {
                 <SheetTrigger asChild>
                   <Button>Edit user</Button>
                 </SheetTrigger>
-                <SheetContent>
-                  <SheetHeader>
-                    <SheetTitle>Are you absolutely sure?</SheetTitle>
-                    <SheetDescription>
-                      This action cannot be undone.
-                    </SheetDescription>
-                  </SheetHeader>
-                </SheetContent>
+                <EditUser />
               </Sheet>
             </div>
             <div className="space-y-4 mt-4">
@@ -171,8 +158,24 @@ const UserPage = () => {
           </div>
         </div>
         <div className="w-full xl:w-2/3 space-y-6">
-          <div className="bg-primary-foreground p-4 rounded-lg">User Card</div>
-          <div className="bg-primary-foreground p-4 rounded-lg">Chart</div>
+          <div className="bg-primary-foreground p-4 rounded-lg space-y-2">
+            <div className="flex items-center gap-2">
+              <Avatar className="size-12">
+                <AvatarImage src="https://github.com/shadcn.png" />
+                <AvatarFallback>CN</AvatarFallback>
+              </Avatar>
+              <h1 className="text-lg font-semibold mt-2">John Doe</h1>
+            </div>
+            <p className="text-sm text-muted-foreground">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
+              soluta nesciunt quod consequuntur dicta ab nostrum sed sunt,
+              blanditiis alias voluptatem in obcaecati fugiat ipsa.
+            </p>
+          </div>
+          <div className="bg-primary-foreground p-4 rounded-lg">
+            <h1 className="text-lg font-semibold">User Activities</h1>
+            <AppLineChart />
+          </div>
         </div>
       </div>
     </div>
