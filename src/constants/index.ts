@@ -173,7 +173,7 @@ export const USER_DATA: PaymentType[] = [
   {
     id: 1,
     amount: 250.75,
-    status: "completed",
+    status: "success",
     email: "john.doe@example.com",
     username: "johndoe",
   },
@@ -194,7 +194,7 @@ export const USER_DATA: PaymentType[] = [
   {
     id: 4,
     amount: 89.99,
-    status: "completed",
+    status: "success",
     email: "emma.wilson@example.com",
     username: "emmaw",
   },
@@ -208,7 +208,7 @@ export const USER_DATA: PaymentType[] = [
   {
     id: 6,
     amount: 45.5,
-    status: "completed",
+    status: "success",
     email: "olivia.taylor@example.com",
     username: "oliviat",
   },
@@ -229,7 +229,7 @@ export const USER_DATA: PaymentType[] = [
   {
     id: 9,
     amount: 650.3,
-    status: "completed",
+    status: "success",
     email: "ava.jackson@example.com",
     username: "avaj",
   },
@@ -243,7 +243,7 @@ export const USER_DATA: PaymentType[] = [
   {
     id: 11,
     amount: 430.0,
-    status: "completed",
+    status: "success",
     email: "sophia.harris@example.com",
     username: "sophiah",
   },
@@ -257,7 +257,7 @@ export const USER_DATA: PaymentType[] = [
   {
     id: 13,
     amount: 999.99,
-    status: "completed",
+    status: "success",
     email: "isabella.clark@example.com",
     username: "isabellac",
   },
@@ -278,7 +278,7 @@ export const USER_DATA: PaymentType[] = [
   {
     id: 16,
     amount: 820.15,
-    status: "completed",
+    status: "success",
     email: "lucas.hall@example.com",
     username: "lucash",
   },
@@ -292,7 +292,7 @@ export const USER_DATA: PaymentType[] = [
   {
     id: 18,
     amount: 410.85,
-    status: "completed",
+    status: "success",
     email: "henry.young@example.com",
     username: "henryy",
   },
@@ -306,7 +306,7 @@ export const USER_DATA: PaymentType[] = [
   {
     id: 20,
     amount: 150.9,
-    status: "completed",
+    status: "success",
     email: "daniel.scott@example.com",
     username: "daniels",
   },
